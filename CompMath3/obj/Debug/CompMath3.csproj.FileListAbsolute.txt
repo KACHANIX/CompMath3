@@ -1,0 +1,10 @@
+C:\Users\SKOCH\source\repos\CompMath3\CompMath3\bin\Debug\CompMath3.exe.config
+C:\Users\SKOCH\source\repos\CompMath3\CompMath3\bin\Debug\CompMath3.exe
+C:\Users\SKOCH\source\repos\CompMath3\CompMath3\bin\Debug\CompMath3.pdb
+C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.Form1.resources
+C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.Properties.Resources.resources
+C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.csproj.GenerateResource.Cache
+C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.csproj.CoreCompileInputs.cache
+C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.exe
+C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.pdb
+C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.csprojResolveAssemblyReference.cache
