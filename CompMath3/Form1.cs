@@ -13,9 +13,9 @@ namespace CompMath3
 {
     public partial class Form1 : Form
     {
-        public delegate double CurFun (double x);
+        public delegate double CurFun(double x);
         public CurFun CurrentFunction;
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -24,12 +24,15 @@ namespace CompMath3
             //MaximizeBox = false;
             Chart.Visible = false;
 
+            Fxtb.ReadOnly = true;
+            Xnum.Minimum = -1000;
+            Xnum.DecimalPlaces = 3;
 
-            CurrentFunction  = Math.Sin;
+
+            CurrentFunction = Math.Sin;
             Func.Items.Add("Sin(x)");
             Func.Items.Add("Sqrt(x)");
             Func.Items.Add("x^2");
-            Func.Items.Add("Tg(x)");
             Func.ReadOnly = true;
             FirstNode.Minimum = -1000;
             FirstNode.DecimalPlaces = 4;
@@ -42,12 +45,14 @@ namespace CompMath3
             Steps.Value = 20;
             Steps.Minimum = 1;
             Steps.Maximum = 10000;
-            
+
 
 
             Steps.KeyPress += new KeyPressEventHandler(Key_down);
             Step.KeyPress += new KeyPressEventHandler(Key_down);
             FirstNode.KeyPress += new KeyPressEventHandler(Key_down);
+
+            Fx.Text = Func.SelectedItem.ToString();
 
         }
         private void Key_down(object sender, KeyPressEventArgs e)
@@ -78,14 +83,14 @@ namespace CompMath3
                 ChartArea = "Two charts"
             };
             for (double x = (double)FirstNode.Value; x <= (double)FirstNode.Value + (double)Step.Value * (double)Steps.Value;
-                x += ((double)Step.Value * (double)Steps.Value)/1000)
+                x += ((double)Step.Value * (double)Steps.Value) / 1000)
             {
                 fun.Points.AddXY(x, CurrentFunction(x));
             }
             Chart.Series.Add(fun);
             BuildInterpolation();
         }
-        
+
         public void BuildInterpolation()
         {
             Series interpolatedfun = new Series("Interpolated")
@@ -93,7 +98,7 @@ namespace CompMath3
                 ChartType = SeriesChartType.FastLine,
                 ChartArea = "Two charts",
                 Color = Color.Red
-                
+
             };
             Series Nodes = new Series("Nodes")
             {
@@ -131,47 +136,33 @@ namespace CompMath3
         {
             if (Func.SelectedItem.ToString() == "Sin(x)")
             {
+                FirstNode.Minimum = -1000;
+
+                Xnum.Minimum = -1000;
                 CurrentFunction = Math.Sin;
             }
             if (Func.SelectedItem.ToString() == "Sqrt(x)")
             {
+                FirstNode.Minimum = 0;
+
+                Xnum.Minimum = 0;
                 CurrentFunction = Math.Sqrt;
             }
             if (Func.SelectedItem.ToString() == "x^2")
             {
-                CurrentFunction = x => x*x;
+                FirstNode.Minimum = -1000;
+
+                Xnum.Minimum = -1000;
+                CurrentFunction = x => x * x;
             }
-            if (Func.SelectedItem.ToString() == "Tg(x)")
-            {
-                CurrentFunction = Math.Tan;
-            }
-            
+
+            Fx.Text = Func.SelectedItem.ToString();
+
             //MessageBox.Show(CurrentFunction(5).ToString());
         }
         private void Interpolate_Click(object sender, EventArgs e)
         {
             BuildCharts();
-            //Chart myChart = new Chart();
-            ////кладем его на форму и растягиваем на все окно.
-            //myChart.Parent = this;
-            //myChart.Dock = DockStyle.Fill;
-            ////добавляем в Chart область для рисования графиков, их может быть
-            ////много, поэтому даем ей имя.
-            //myChart.ChartAreas.Add(new ChartArea("Math functions"));
-            ////Создаем и настраиваем набор точек для рисования графика, в том
-            ////не забыв указать имя области на которой хотим отобразить этот
-            ////набор точек.
-            //Series mySeriesOfPoint = new Series("Sinus");
-            //mySeriesOfPoint.ChartType = SeriesChartType.Line;
-            //mySeriesOfPoint.ChartArea = "Math functions";
-            //for (double x = -Math.PI; x <= Math.PI; x += Math.PI / 1000)
-            //{
-            //    mySeriesOfPoint.Points.AddXY(x, Math.Sin(x));
-            //}
-            ////Добавляем созданный набор точек в Chart
-            //myChart.Series.Add(mySeriesOfPoint);
-
-            //this.Controls.Add(myChart);
         }
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
@@ -184,6 +175,11 @@ namespace CompMath3
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Xnum_ValueChanged(object sender, EventArgs e)
+        {
+            Fxtb.Text = CurrentFunction((double)Xnum.Value).ToString();
         }
     }
 

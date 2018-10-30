@@ -8,3 +8,13 @@ C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.csproj.CoreC
 C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.exe
 C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.pdb
 C:\Users\SKOCH\source\repos\CompMath3\CompMath3\obj\Debug\CompMath3.csprojResolveAssemblyReference.cache
+C:\Users\kocha\Desktop\CompMath3\CompMath3\bin\Debug\CompMath3.exe.config
+C:\Users\kocha\Desktop\CompMath3\CompMath3\bin\Debug\CompMath3.exe
+C:\Users\kocha\Desktop\CompMath3\CompMath3\bin\Debug\CompMath3.pdb
+C:\Users\kocha\Desktop\CompMath3\CompMath3\obj\Debug\CompMath3.csprojAssemblyReference.cache
+C:\Users\kocha\Desktop\CompMath3\CompMath3\obj\Debug\CompMath3.Form1.resources
+C:\Users\kocha\Desktop\CompMath3\CompMath3\obj\Debug\CompMath3.Properties.Resources.resources
+C:\Users\kocha\Desktop\CompMath3\CompMath3\obj\Debug\CompMath3.csproj.GenerateResource.cache
+C:\Users\kocha\Desktop\CompMath3\CompMath3\obj\Debug\CompMath3.csproj.CoreCompileInputs.cache
+C:\Users\kocha\Desktop\CompMath3\CompMath3\obj\Debug\CompMath3.exe
+C:\Users\kocha\Desktop\CompMath3\CompMath3\obj\Debug\CompMath3.pdb
